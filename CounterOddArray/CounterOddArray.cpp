@@ -32,6 +32,18 @@ int OddCount(int arr[100], int arrLength)
 	return Counter;
 }
 
+int EvenCount(int arr[100], int arrLength)
+{
+	int Counter = 0;
+	for (int i = 0; i < arrLength; i++)
+	{
+		if (arr[i] % 2 == 0)
+		{
+			Counter++;
+		}
+	}
+	return Counter;
+}
 int main()
 { //Seeds the random number generator in C++, called only once
 	srand((unsigned)time(NULL));
@@ -41,5 +53,7 @@ int main()
 	PrintArray(arr, arrLength);
 	cout << "\nOdd Numbers count is: ";
 	cout << OddCount(arr, arrLength) << endl;
+	cout << "\nEven Numbers count is: ";
+	cout << EvenCount(arr, arrLength) << endl;
 	return 0;
 }
